@@ -8,6 +8,7 @@ import "react-toastify/dist/ReactToastify.css";
 
 const getLocalItems = () => {
   let list = localStorage.getItem("lists");
+  console.log(JSON.parse(list));
   if (list) {
     return JSON.parse(list);
   } else {
@@ -76,7 +77,7 @@ const Todo = () => {
       <div className="container mt-5 border-radius-10 max-width-600 mx-auto">
         <div className="card bg-danger text-light text-center">
           <div className="card-body">
-            <h3 className="card-title fs-2 my-3">Todo List</h3>
+            <h1 className="card-title fs-1 text-info text-center  my-3">Todo List</h1>
             <div className="input-group mb-3">
               <input
                 type="text"
